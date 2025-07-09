@@ -4,7 +4,7 @@ import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteProduct, getProducts } from "../../redux/apiCalls";
+import {  getProducts } from "../../redux/apiCalls";
 
 export default function ProductList() {
   const dispatch = useDispatch();
@@ -14,9 +14,7 @@ export default function ProductList() {
     getProducts(dispatch);
   }, [dispatch]);
 
-  const handleDelete = (id) => {
-    deleteProduct(id, dispatch);
-  };
+
 
   const columns = [
     { field: "_id", headerName: "ID", width: 220 },

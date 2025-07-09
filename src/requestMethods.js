@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000/api/";
+const BASE_URL = "https://farmers-backend-iota.vercel.app/api/";
 
 const getToken = () => {
   try {
