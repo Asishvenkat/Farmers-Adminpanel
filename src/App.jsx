@@ -7,7 +7,6 @@ import Home from "./pages/home/Home.jsx";
 import { Routes, Route, Navigate } from "react-router-dom";
 import UserList from "./pages/userList/UserList.jsx";
 import ProductList from "./pages/productList/ProductList.jsx";
-import Product from "./pages/product/Product.jsx";
 
 import Login from "./pages/login/Login.jsx";
 import AllTransactions from "./pages/transactions/transactions.jsx";
