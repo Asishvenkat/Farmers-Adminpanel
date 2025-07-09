@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Topbar from "./components/topbar/Topbar.jsx";
 import Sidebar from "./components/sidebar/Sidebar.jsx";
-// import "./App.css";
+import "./App.css";
 import Home from "./pages/home/Home.jsx";
 import { Routes, Route, Navigate } from "react-router-dom";
 import UserList from "./pages/userList/UserList.jsx";
@@ -50,7 +50,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/users" element={<UserList />} />
               <Route path="/products" element={<ProductList />} />
-              <Route path="/product/:productId" element={<Product />} />
+         
             
               <Route path="/transactions" element={<AllTransactions />} />
             </>
