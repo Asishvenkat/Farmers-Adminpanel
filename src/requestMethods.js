@@ -1,14 +1,21 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000/api/";
+const BASE_URL = "https://farmers-backend-iota.vercel.app/api/";
 
 const getToken = () => {
   try {
     const root = localStorage.getItem("persist:root");
     if (!root) return null;
-    const user = JSON.parse(JSON.parse(root).user);
-    return user.currentUser?.accessToken || null;
-  } catch {
+
+    const parsedRoot = JSON.parse(root);
+
+    if (!parsedRoot.user) return null;
+
+    const userData = JSON.parse(parsedRoot.user);
+
+    return userData?.currentUser?.accessToken || null;
+  } catch (err) {
+    console.error("Token parse error:", err);
     return null;
   }
 };
